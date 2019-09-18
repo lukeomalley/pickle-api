@@ -12,7 +12,6 @@ module Types
     field :comments, [Types::CommentType], null: true
     field :commentors, [Types::UserType], null: true
     field :voters, [Types::UserType], null: true
-    # TODO: look into this this is breaking the code??
     field :selections, [Types::SelectionType], null: true
   end
 end

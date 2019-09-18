@@ -7,8 +7,7 @@ class User < ApplicationRecord
   has_many :selections
   has_many :options, through: :selections
 
-  # maybe these alias will work, but im not sure right now
-  # TODO: check if these methods work
+  # aliases for the pickles that a user has interacted with
   has_many :commented_pickles, through: :comments, source: :pickle
   has_many :voted_pickles, through: :options, source: :pickle
 end
