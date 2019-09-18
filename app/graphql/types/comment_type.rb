@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class CommentType < Types::BaseObject
     field :text, String, null: false

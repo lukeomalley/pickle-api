@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePickles < ActiveRecord::Migration[6.0]
   def change
     create_table :pickles do |t|

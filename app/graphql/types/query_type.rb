@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module Types
   class QueryType < Types::BaseObject
-
+    # Users
     field :users, [Types::UserType], null: false
     def users
       User.all
@@ -13,17 +15,30 @@ module Types
       User.find(id)
     end
 
-
+    # Pickles
     field :pickles, [Types::PickleType], null: false
     def pickles
       Pickle.all
     end
 
-    field :options, [Types::OptionType], null:false do
-      argument :pickleId, ID, required: true
+    field :pickle, Types::PickleType, null: false do
+      argument :id, ID, required: true
     end
-    def options(pickleId:)
-      Option.where(pickle_id: pickleId)
+    def pickle(id:)
+      Pickle.find(id)
+    end
+
+    # Categories
+    field :categories, [Types::CategoryType], null: false
+    def categories
+      Category.all
+    end
+
+    field :category, Types::CategoryType, null: false do
+      argument :id, ID, required: true
+    end
+    def category(id:)
+      Category.find(id)
     end
   end
 end
