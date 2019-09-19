@@ -11,6 +11,6 @@ module Types
 
     field :delete_pickle, mutation: Mutations::DeletePickle
     field :delete_user, mutation: Mutations::DeleteUser
-    
+    field :delete_comment, mutation: Mutations::DeleteComment
   end
 end
