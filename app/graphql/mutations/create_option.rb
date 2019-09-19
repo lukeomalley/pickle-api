@@ -8,9 +8,10 @@ module Mutations
     field :errors, [String], null: false
 
     def resolve(pickle_id:, text:, img_url:)
+      # TODO: passing all three parameters is required here, but they can be passed as empty strings
+      # TODO: if the img_url.empty? then we know that it is just a text option
       pickle = Pickle.find(pickle_id)
       option = Option.create(pickle: pickle, text: text, img_url: img_url)
-
       if option.save
         {
           option: option,
