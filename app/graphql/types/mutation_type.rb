@@ -14,8 +14,10 @@ module Types
     field :delete_comment, mutation: Mutations::DeleteComment
 
     field :update_pickle, mutation: Mutations::UpdatePickle
+
+    # TODO: TEST THE MUTATIONS BELOW
     field :update_user, mutation: Mutations::UpdateUser
     field :update_comment, mutation: Mutations::UpdateComment
-
+    field :update_option, mutation: Mutations::UpdateOption
   end
 end
