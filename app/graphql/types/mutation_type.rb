@@ -14,5 +14,8 @@ module Types
     field :delete_comment, mutation: Mutations::DeleteComment
 
     field :update_pickle, mutation: Mutations::UpdatePickle
+    field :update_user, mutation: Mutations::UpdateUser
+    field :update_comment, mutation: Mutations::UpdateComment
+
   end
 end
