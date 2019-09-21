@@ -9,10 +9,10 @@ module Types
     end
 
     field :user, Types::UserType, null: false do
-      argument :id, ID, required: true
+      argument :username, String, required: false
     end
-    def user(id:)
-      User.find(id)
+    def user(username:)
+      User.find_by(username: username)
     end
 
     # Pickles

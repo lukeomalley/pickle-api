@@ -10,4 +10,6 @@ class User < ApplicationRecord
   # aliases for the pickles that a user has interacted with
   has_many :commented_pickles, through: :comments, source: :pickle
   has_many :voted_pickles, through: :options, source: :pickle
+
+  validates_uniqueness_of :username
 end
