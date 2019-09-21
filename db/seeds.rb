@@ -87,7 +87,7 @@ game_pickle = Pickle.create(
   category: games,
   description: "What board game should me and my friends play tonight?"
 )
-sorry = Option.create(pickle: dinner_pickle, text: 'Sorry')
-clue = Option.create(pickle: dinner_pickle, text: 'Clue')
-monopoly = Option.create(pickle: dinner_pickle, text: 'Monopoly')
+sorry = Option.create(pickle: game_pickle, text: 'Sorry')
+clue = Option.create(pickle: game_pickle, text: 'Clue')
+monopoly = Option.create(pickle: game_pickle, text: 'Monopoly')
 Comment.create(user: katy, pickle: game_pickle, text: 'What kind of freak would want to play sorry? 😂')
