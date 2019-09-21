@@ -43,8 +43,10 @@ katy = User.create(
 # Categories
 development = Category.create(name: 'development')
 lifestyle = Category.create(name: 'lifestyle')
+food = Category.create(name: 'food')
+games = Category.create(name: 'games')
 
-# Pickles
+# Framework Pickle
 framework_pickle = Pickle.create(
   user: luke,
   category: development,
@@ -54,19 +56,38 @@ vue = Option.create(pickle: framework_pickle, text: 'Vue')
 react = Option.create(pickle: framework_pickle, text: 'React')
 svelte = Option.create(pickle: framework_pickle, text: 'Svelte')
 angular = Option.create(pickle: framework_pickle, text: 'Angular')
+Comment.create(user: meagan, pickle: framework_pickle, text: 'Im loving svelte these days')
+Comment.create(user: katy, pickle: framework_pickle, text: 'You gotta try out VUE its amazing! 🎉')
+Selection.create(user: meagan, option: svelte)
 
+# Wedding Pickle
 wedding_pickle = Pickle.create(
   user: meagan,
   category: lifestyle,
-  description: "Should I go to my friends wedding?"
+  description: "Should I go to my best friends wedding?"
 )
 yes = Option.create(pickle: wedding_pickle, text: 'Yes')
 no = Option.create(pickle: wedding_pickle, text: 'No')
-
-# Selections
-Selection.create(user: meagan, option: svelte)
+Comment.create(user: luke, pickle: wedding_pickle, text: "I probably wouldn't tbh, but thats just me")
 Selection.create(user: luke, option: yes)
 
-# Comments
-Comment.create(user: meagan, pickle: framework_pickle, text: 'Im loving svelte these days')
-Comment.create(user: katy, pickle: framework_pickle, text: 'You gotta try out VUE its amazing! 🎉')
+dinner_pickle = Pickle.create(
+  user: katy,
+  category: food,
+  description: "What should I have for dinner tonight?"
+)
+soup = Option.create(pickle: dinner_pickle, text: 'Kale Soup')
+steak = Option.create(pickle: dinner_pickle, text: 'Steak and Potatoes')
+sushi = Option.create(pickle: dinner_pickle, text: 'Sushi')
+pizza = Option.create(pickle: dinner_pickle, text: 'Pizza with Pep')
+Comment.create(user: meagan, pickle: dinner_pickle, text: 'Pizza! Pizza! Pizza! 🍕')
+
+game_pickle = Pickle.create(
+  user: luke,
+  category: games,
+  description: "What board game should me and my friends play tonight?"
+)
+sorry = Option.create(pickle: dinner_pickle, text: 'Sorry')
+clue = Option.create(pickle: dinner_pickle, text: 'Clue')
+monopoly = Option.create(pickle: dinner_pickle, text: 'Monopoly')
+Comment.create(user: katy, pickle: game_pickle, text: 'What kind of freak would want to play sorry? 😂')

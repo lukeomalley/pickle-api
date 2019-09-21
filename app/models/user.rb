@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :pickles, dependent: :destroy
 
-  has_many :selections
+  has_many :selections, dependent: :destroy
   has_many :options, through: :selections
 
   # aliases for the pickles that a user has interacted with
