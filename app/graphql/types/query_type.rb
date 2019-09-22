@@ -35,10 +35,10 @@ module Types
     end
 
     field :category, Types::CategoryType, null: false do
-      argument :id, ID, required: true
+      argument :name, String, required: true
     end
-    def category(id:)
-      Category.find(id)
+    def category(name:)
+      Category.find_by(name: name)
     end
   end
 end
