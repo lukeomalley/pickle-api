@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations
   class DeleteComment < Mutations::BaseMutation
     argument :comment_id, ID, required: true

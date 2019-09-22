@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations
   class UpdateOption < Mutations::BaseMutation
     argument :option_id, ID, required: true

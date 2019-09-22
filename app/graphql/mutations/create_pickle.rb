@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations
   class CreatePickle < Mutations::BaseMutation
     argument :user_id, ID, required: true

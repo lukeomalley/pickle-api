@@ -64,7 +64,7 @@ Selection.create(user: meagan, option: svelte)
 wedding_pickle = Pickle.create(
   user: meagan,
   category: lifestyle,
-  description: "Should I go to my best friends wedding?"
+  description: 'Should I go to my best friends wedding?'
 )
 yes = Option.create(pickle: wedding_pickle, text: 'Yes')
 no = Option.create(pickle: wedding_pickle, text: 'No')
@@ -74,7 +74,7 @@ Selection.create(user: luke, option: yes)
 dinner_pickle = Pickle.create(
   user: katy,
   category: food,
-  description: "What should I have for dinner tonight?"
+  description: 'What should I have for dinner tonight?'
 )
 soup = Option.create(pickle: dinner_pickle, text: 'Kale Soup')
 steak = Option.create(pickle: dinner_pickle, text: 'Steak and Potatoes')
@@ -85,7 +85,7 @@ Comment.create(user: meagan, pickle: dinner_pickle, text: 'Pizza! Pizza! Pizza! 
 game_pickle = Pickle.create(
   user: luke,
   category: games,
-  description: "What board game should me and my friends play tonight?"
+  description: 'What board game should me and my friends play tonight?'
 )
 sorry = Option.create(pickle: game_pickle, text: 'Sorry')
 clue = Option.create(pickle: game_pickle, text: 'Clue')

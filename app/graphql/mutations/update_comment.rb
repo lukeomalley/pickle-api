@@ -1,4 +1,6 @@
-# TODO CHECK IF THIS WORKS
+# frozen_string_literal: true
+
+# TODO: CHECK IF THIS WORKS
 module Mutations
   class UpdateComment < Mutations::BaseMutation
     argument :id, ID, required: true
