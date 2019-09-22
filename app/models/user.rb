@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  #TODO WATCH LECTURE ON HOW TO SETUP JWT AUTH
   has_secure_password
 
   has_many :comments, dependent: :destroy
@@ -13,5 +14,5 @@ class User < ApplicationRecord
   has_many :commented_pickles, through: :comments, source: :pickle
   has_many :voted_pickles, through: :options, source: :pickle
 
-  validates_uniqueness_of :username
+  validates :username, uniqueness: { case_sensitive: false }
 end
