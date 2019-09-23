@@ -15,6 +15,9 @@ module Types
 
     field :update_pickle, mutation: Mutations::UpdatePickle
 
+    # AUTH
+    field :sign_in_user, mutation: Mutations::SignInUser
+
     # TODO: TEST THE MUTATIONS BELOW
     field :update_user, mutation: Mutations::UpdateUser
     field :update_comment, mutation: Mutations::UpdateComment
