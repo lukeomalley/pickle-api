@@ -27,7 +27,7 @@ module Types
     end
 
     field :pickle, Types::PickleType, null: false do
-      argument :id, ID, required: true
+      argument :id, Int, required: true
     end
     def pickle(id:)
       Pickle.find(id)
