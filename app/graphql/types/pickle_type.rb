@@ -8,7 +8,7 @@ module Types
     # assoications
     field :user, Types::UserType, null: false
     field :category, Types::CategoryType, null: false
-    field :options, [Types::OptionType], null: false
+    field :options, [Types::OptionType], null: true
     field :comments, [Types::CommentType], null: true
     field :commentors, [Types::UserType], null: true
     field :voters, [Types::UserType], null: true

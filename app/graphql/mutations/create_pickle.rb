@@ -2,15 +2,14 @@
 
 module Mutations
   class CreatePickle < Mutations::BaseMutation
-    argument :user_id, ID, required: true
-    argument :category_id, ID, required: true
+    argument :category_id, Int, required: true
     argument :description, String, required: true
 
     field :pickle, Types::PickleType, null: true
     field :errors, [String], null: false
 
-    def resolve(user_id:, category_id:, description:)
-      user = User.find(user_id)
+    def resolve(category_id:, description:)
+      user = context[:current_user]
       category = Category.find(category_id)
       pickle = Pickle.new(user: user, category: category, description: description)
 
