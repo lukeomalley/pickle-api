@@ -15,6 +15,11 @@ module Types
       User.find_by(username: username)
     end
 
+    field :me, Types::UserType, null: true
+    def me
+      context[:current_user]
+    end
+
     # Pickles
     field :pickles, [Types::PickleType], null: false
     def pickles

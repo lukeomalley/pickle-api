@@ -2,16 +2,15 @@
 
 module Mutations
   class CreateComment < Mutations::BaseMutation
-    argument :pickle_id, ID, required: true
-    argument :user_id, ID, required: true
+    argument :pickle_id, Int, required: true
     argument :text, String, required: true
 
     field :comment, Types::CommentType, null: true
     field :errors, [String], null: false
 
-    def resolve(pickle_id:, user_id:, text:)
+    def resolve(pickle_id:, text:)
       pickle = Pickle.find(pickle_id)
-      user = User.find(user_id)
+      user = context[:current_user]
       comment = Comment.new(pickle: pickle, user: user, text: text)
       if comment.save
         {

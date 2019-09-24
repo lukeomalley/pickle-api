@@ -9,7 +9,7 @@ module Mutations
     field :errors, [String], null: false
 
     def resolve(user_id:, option_id:)
-      user = User.find(user_id)
+      user = context[:current_user]
       option = Option.find(option_id)
       selection = Selection.new(user: user, option: option)
 
