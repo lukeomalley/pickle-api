@@ -188,7 +188,6 @@ sports = Category.create(name: 'Sports')
 pets = Category.create(name: 'Pets')
 tech = Category.create(name: 'Technology')
 music = Category.create(name: 'Music')
-music = Category.create(name: '')
 
 
 # Framework Pickle
