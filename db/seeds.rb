@@ -1,13 +1,5 @@
 # frozen_string_literal: true
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 User.destroy_all
 Category.destroy_all
 Pickle.destroy_all
@@ -56,6 +48,135 @@ kolton = User.create(
   password_confirmation: 'test'
 )
 
+rob = User.create(
+  name: 'Rob',
+  username: 'trob',
+  email: 'trob@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4E03AQGffnaPfO2AWg/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=4tCx055Qk9y--MbwxgwzfjkQ9c9qqxMQiQ7kli4e6Is',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+sam = User.create(
+  name: 'Sam',
+  username: 'samkane',
+  email: 'samkane@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4D03AQFDwz89h3LTeg/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=3zTIhxgvrzSq0-YF_cKP0KPPO46BcSaheeWcQZTok9g',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+leslie = User.create(
+  name: 'Leslie',
+  username: 'lesliesage',
+  email: 'lesliesage@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4D03AQEFf108soefGw/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=wKXm-REwMM8lg5z1UXsBOEu5uTt4_e9RjqIrXyZ5KF0',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+ursula = User.create(
+  name: 'Ursula',
+  username: 'ursulamiller',
+  email: 'ursulamiller@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4E03AQF_Rt_q-Z2PNw/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=3FFWS6Cv2wiu78jRO3UTG1O61dhQ_YvI8ERvGhvbHqI',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+harum = User.create(
+  name: 'Harum',
+  username: 'harumhelmy',
+  email: 'harumhelmy@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4E03AQFwdOxozNSbCw/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=0TmWTH1fWJnZciYpcXC4EL1003tcSC1ly5uSyBjCXNk',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+ashley = User.create(
+  name: 'Ashley',
+  username: 'ashleytolen',
+  email: 'ashleytolen@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://scontent-iad3-1.xx.fbcdn.net/v/t31.0-1/10431331_1497335683813584_5439392674056005421_o.jpg?_nc_cat=100&_nc_oc=AQkyUF7lO-7tuj7pz0dspWdej04CZ2Bvy9d5OC8cN9Pyq_FBWY6yM6ZBY8hVWXZJRZ8&_nc_ht=scontent-iad3-1.xx&oh=e9ee3a7d65460e0daf84d60fc885c75e&oe=5E2D2021',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+jesse = User.create(
+  name: 'Jesse',
+  username: 'jesseberman',
+  email: 'jesseberman@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4E03AQF__A7hclcNKg/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=vM6fMqCcRi0ZVUbeugJI5VwrB2avU8drVcQJ12eZ10s',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+nick = User.create(
+  name: 'Nick',
+  username: 'nickruggieri',
+  email: 'nickruggieri@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4E03AQGK-zl8Fp28gA/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=87uCok9YepxRGlul4cGhYMUkTE228l5ip9pQO59iXQ4',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+michelle = User.create(
+  name: 'Michelle',
+  username: 'michellelam',
+  email: 'michellelam@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4D03AQEdLD4kcDs2BQ/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=NoESxNyYaLd4LC_S1mhO0Q3fgFILeoyUmjjQ9rlj8U8',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+claudia = User.create(
+  name: 'Claudia',
+  username: 'michellelam',
+  email: 'michellelam@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4D03AQEdLD4kcDs2BQ/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=NoESxNyYaLd4LC_S1mhO0Q3fgFILeoyUmjjQ9rlj8U8',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+lisa = User.create(
+  name: 'Lisa',
+  username: 'lisaantwi',
+  email: 'lisaantwi@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4E03AQGPrjeP5bwc-Q/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=MRAP2yfH5twS171xn6Yh0QCbwA5XY38IUs-qTRO1KfM',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+chine = User.create(
+  name: 'Chine',
+  username: 'chineanikwe',
+  email: 'chineanikwe@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4D03AQHt_ibEoGEhJg/profile-displayphoto-shrink_200_200/0?e=1574899200&v=beta&t=tZUKTJi2Sksd7ikk9z7HC3kOQXo-SDxgo-QxJ66fveQ',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
+trev = User.create(
+  name: 'Trev',
+  username: 'trevdog',
+  email: 'trevdog@flatironschool.com',
+  bio: 'web developer',
+  img_url: 'https://media.licdn.com/dms/image/C4E03AQHvJQFylDD8Wg/profile-displayphoto-shrink_200_200/0?e=1574899200&v=beta&t=46PQSHZTpAyeXSzupGhQuibFnCocwajbi4VX4kTfUzg',
+  password: 'test',
+  password_confirmation: 'test'
+)
 
 # Categories
 development = Category.create(name: 'Development')
@@ -64,6 +185,11 @@ food = Category.create(name: 'Food')
 games = Category.create(name: 'Games')
 politics = Category.create(name: 'Politics')
 sports = Category.create(name: 'Sports')
+pets = Category.create(name: 'Pets')
+tech = Category.create(name: 'Technology')
+music = Category.create(name: 'Music')
+music = Category.create(name: '')
+
 
 # Framework Pickle
 framework_pickle = Pickle.create(
@@ -120,3 +246,20 @@ redskins = Option.create(pickle: sports_pickle, text: 'Washington Redskins')
 cowboys = Option.create(pickle: sports_pickle, text: 'Dallas Cowboys')
 patriots = Option.create(pickle: sports_pickle, text: 'New England Patriots')
 Comment.create(user: luke, pickle: sports_pickle, text: 'Skins are going all the way this year baby! 🏈')
+
+rob_pickle = Pickle.create(
+  user: rob,
+  category: food,
+  description: 'What should I have for lunch today'
+)
+jacks = Option.create(pickle: rob_pickle, text: 'Jacks Fresh')
+fiveguys = Option.create(pickle: rob_pickle, text: 'Fiveguys')
+sweetgreen = Option.create(pickle: rob_pickle, text: 'Sweetgreen')
+potbelly = Option.create(pickle: rob_pickle, text: 'Potbellys')
+Comment.create(user: luke, pickle: rob_pickle, text: 'Rob! Eat some veggies today please! 🥬')
+Comment.create(user: lisa, pickle: rob_pickle, text: 'You better get sweetgreen today rob 🥬')
+Selection.create(user: harum, option: sweetgreen)
+Selection.create(user: nick, option: fiveguys)
+Selection.create(user: trev, option: potbelly)
+Selection.create(user: luke, option: jacks)
+
