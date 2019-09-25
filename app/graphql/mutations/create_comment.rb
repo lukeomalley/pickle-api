@@ -6,6 +6,7 @@ module Mutations
     argument :text, String, required: true
 
     field :comment, Types::CommentType, null: true
+    field :pickle, Types::PickleType, null: true
     field :errors, [String], null: false
 
     def resolve(pickle_id:, text:)
@@ -15,11 +16,13 @@ module Mutations
       if comment.save
         {
           comment: comment,
+          pickle: comment.pickle,
           errors: []
         }
       else
         {
           comment: nil,
+          pickle: nil,
           errors: comment.errors.full_messages
         }
       end
