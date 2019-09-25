@@ -9,6 +9,6 @@ class Option < ApplicationRecord
     total_selections = pickle.selections.count.to_f
     return 0 if total_selections.zero?
 
-    (option_selections / total_selections) * 100
+    ((option_selections / total_selections) * 100).round(2)
   end
 end
