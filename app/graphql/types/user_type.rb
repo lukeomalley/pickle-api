@@ -14,5 +14,6 @@ module Types
     field :comments, [Types::CommentType], null: true
     field :commented_pickles, [Types::PickleType], null: true
     field :voted_pickles, [Types::PickleType], null: false
+    field :options, [Types::OptionType], null: false
   end
 end
