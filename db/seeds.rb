@@ -178,6 +178,16 @@ trev = User.create(
   password_confirmation: 'test'
 )
 
+seamus = User.create(
+  name: 'Seamus Quinn',
+  username: 'seamusquinn',
+  email: 'seamusquinn29@gmail.com',
+  bio: 'puppy is cute',
+  img_url: 'https://scontent-iad3-1.cdninstagram.com/vp/769571148503b4fe220f2916ea67c2fc/5E1B0E0C/t51.2885-15/sh0.08/e35/p640x640/69542878_141921893702007_1856759306024768386_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=103',
+  password: 'test',
+  password_confirmation: 'test'
+)
+
 # Categories
 development = Category.create(name: 'Development')
 lifestyle = Category.create(name: 'Lifestyle')
