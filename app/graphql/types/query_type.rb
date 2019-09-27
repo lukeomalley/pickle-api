@@ -23,7 +23,7 @@ module Types
     # Pickles
     field :pickles, [Types::PickleType], null: false
     def pickles
-      Pickle.all
+      Pickle.all.reverse
     end
 
     field :pickle, Types::PickleType, null: false do
