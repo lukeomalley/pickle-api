@@ -140,8 +140,8 @@ michelle = User.create(
 
 claudia = User.create(
   name: 'Claudia',
-  username: 'michellelam',
-  email: 'michellelam@flatironschool.com',
+  username: 'claudiasolbes',
+  email: 'claudiasolbes@flatironschool.com',
   bio: 'web developer',
   img_url: 'https://media.licdn.com/dms/image/C4D03AQEdLD4kcDs2BQ/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=NoESxNyYaLd4LC_S1mhO0Q3fgFILeoyUmjjQ9rlj8U8',
   password: 'test',

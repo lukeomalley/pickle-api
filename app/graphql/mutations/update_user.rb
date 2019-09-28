@@ -2,9 +2,8 @@
 
 module Mutations
   class UpdateUser < Mutations::BaseMutation
-    argument :user_id, ID, required: true
-    argument :name, String, required: true
-    argument :username, String, required: true
+    argument :name, String, required: false
+    argument :username, String, required: false
     argument :email, String, required: false
     argument :bio, String, required: false
     argument :img_url, String, required: false
@@ -12,8 +11,8 @@ module Mutations
     field :user, Types::UserType, null: false
     field :errors, [String], null: false
 
-    def resolve(user_id:, name:, username:, email:, bio:, img_url:)
-      user = User.find(user_id)
+    def resolve(name:, username:, email:, bio:, img_url:)
+      user = context[:current_user]
       if user.update(name: name, username: username, email: email, bio: bio, img_url: img_url)
         { user: user, errors: [] }
       else
