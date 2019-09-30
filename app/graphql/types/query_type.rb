@@ -33,6 +33,11 @@ module Types
       Pickle.find(id)
     end
 
+    field :trending_pickles, [Types::PickleType], null: false
+    def trending_pickles
+      # TODO DO THIS FIELD
+    end
+
     # Categories
     field :categories, [Types::CategoryType], null: false
     def categories

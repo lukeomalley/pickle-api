@@ -2,7 +2,7 @@
 
 module Mutations
   class DeletePickle < Mutations::BaseMutation
-    argument :pickle_id, ID, required: true
+    argument :pickle_id, Int, required: true
 
     field :pickle, Types::PickleType, null: false
     field :errors, [String], null: false

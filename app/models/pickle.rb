@@ -10,4 +10,14 @@ class Pickle < ApplicationRecord
   # these are aliases for the users that have commented and voted on a pickle
   has_many :commentors, through: :comments, source: :user
   has_many :voters, through: :selections, source: :user
+
+
+  def activity
+    (selections.count + comments.count)
+  end
+
+
+  def self.trending
+    all.where
+  end
 end
