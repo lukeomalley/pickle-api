@@ -35,7 +35,7 @@ module Types
 
     field :trending_pickles, [Types::PickleType], null: false
     def trending_pickles
-      # TODO DO THIS FIELD
+      Pickle.trending
     end
 
     # Categories

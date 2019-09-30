@@ -11,13 +11,11 @@ class Pickle < ApplicationRecord
   has_many :commentors, through: :comments, source: :user
   has_many :voters, through: :selections, source: :user
 
-
   def activity
     (selections.count + comments.count)
   end
 
-
   def self.trending
-    all.where
+    all.sort_by(&:activity).last(5).reverse
   end
 end

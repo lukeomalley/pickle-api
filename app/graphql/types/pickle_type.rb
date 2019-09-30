@@ -4,6 +4,7 @@ module Types
   class PickleType < Types::BaseObject
     field :id, ID, null: false
     field :description, String, null: true
+    field :activity, Int, null: true
 
     # assoications
     field :user, Types::UserType, null: false
