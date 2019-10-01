@@ -5,6 +5,7 @@ module Types
     field :id, ID, null: false
     field :description, String, null: true
     field :activity, Int, null: true
+    
 
     # assoications
     field :user, Types::UserType, null: false
@@ -14,5 +15,6 @@ module Types
     field :commentors, [Types::UserType], null: true
     field :voters, [Types::UserType], null: true
     field :selections, [Types::SelectionType], null: true
+    field :votes, Int, null: true
   end
 end

@@ -15,6 +15,10 @@ class Pickle < ApplicationRecord
     (selections.count + comments.count)
   end
 
+  def votes
+    selections.count
+  end
+
   def self.trending
     all.sort_by(&:activity).last(5).reverse
   end
