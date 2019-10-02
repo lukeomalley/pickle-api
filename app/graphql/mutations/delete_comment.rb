@@ -2,8 +2,9 @@
 
 module Mutations
   class DeleteComment < Mutations::BaseMutation
-    argument :comment_id, ID, required: true
+    argument :comment_id, Int, required: true
 
+    field :pickle, Types::PickleType, null: true
     field :comment, Types::CommentType, null: true
     field :errors, [String], null: false
 
@@ -12,11 +13,13 @@ module Mutations
       if comment.destroy
         {
           comment: comment,
+          pickle: comment.pickle,
           errors: []
         }
       else
         {
           comment: nil,
+          pickle: nil,
           errors: comment.errors.full_messages
         }
       end
